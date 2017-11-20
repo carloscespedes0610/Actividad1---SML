@@ -2,4 +2,4 @@
 
 fun number_in_months (fechas:((int*int*int) list), meses: int list)=
   if null meses then 0
-  else number_in_month(fechas,hd(meses)) + number_in_months(fechas,tl(meses)) 			  
+  else number_in_month(fechas,hd(meses)) + number_in_monthsn(fechas,tl(meses)) 			  
