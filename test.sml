@@ -6,3 +6,5 @@ val fechas_list=[(2017,08,29),(2016,09,03),(1998,12,30),(2000,10,06),
 val p2 = number_in_month (fechas_list, 12); (* resp.= 3 *)   
 
 val p3 = number_in_months(fechas_list,[9,3,1]); (* resp.= 2 *)
+
+val p4 = dates_in_month(fechas_list,10);

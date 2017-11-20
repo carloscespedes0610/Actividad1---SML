@@ -21,4 +21,12 @@ fun is_older (fecha1: (int*int*int), fecha2: (int*int*int))=
 
 fun number_in_months (fechas:((int*int*int) list), meses: int list)=
   if null meses then 0
-  else number_in_month(fechas,hd(meses)) + number_in_months(fechas,tl(meses)) 		
+  else number_in_month(fechas,hd(meses)) + number_in_months(fechas,tl(meses))
+
+							   (* Pregunta 4*)
+
+fun dates_in_month (fechas:((int*int*int) list), mes: int)=
+  if null fechas then []
+  else if #2(hd(fechas)) = mes then hd(fechas) :: dates_in_month(tl(fechas),mes)
+       else dates_in_month(tl(fechas),mes)								
+			  
