@@ -29,4 +29,11 @@ fun dates_in_month (fechas:((int*int*int) list), mes: int)=
   if null fechas then []
   else if #2(hd(fechas)) = mes then hd(fechas) :: dates_in_month(tl(fechas),mes)
        else dates_in_month(tl(fechas),mes)								
-			  
+
+			  (* Pregunta 5*)
+
+			  (* Pregunta 6*)
+
+fun get_nth (cadena: (string) list, n: int)=
+  if n=1 then hd(cadena)
+  else get_nth(tl(cadena),n-1)

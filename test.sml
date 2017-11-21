@@ -7,4 +7,8 @@ val p2 = number_in_month (fechas_list, 12); (* resp.= 3 *)
 
 val p3 = number_in_months(fechas_list,[9,3,1]); (* resp.= 2 *)
 
-val p4 = dates_in_month(fechas_list,10);
+val p4 = dates_in_month(fechas_list,12); (* resp.= 8 elementos*)
+
+val p5="sin implementar" ;
+
+val p6 = get_nth (["Carlos", "Erika", "Karla", "Isabela"], 3); (* resp.= Karla*) 
