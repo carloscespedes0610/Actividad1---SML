@@ -1,3 +1,6 @@
+
+(*  Carlos Alberto Cespedes Soliz    *)
+
 (* Pregunta 1 
       is_older ((1,2,3),(2,3,4)) = true;
 *)
@@ -61,16 +64,40 @@ end
     number_before_reaching_sum (10, [1,2,3,4,5]) = 3;
 *)
 
+fun number_before_reaching_sum (sumatoria : int, numeros : int list) =
+  if hd numeros >= sumatoria then 0
+  else 1 + number_before_reaching_sum(sumatoria - hd numeros, tl numeros)
 
 
 (* Pregunta 9
     what_month 70 = 3;
 *)
 
+fun what_month (day : int) =
+   let val month_sums = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+   in number_before_reaching_sum(day, month_sums) + 1
+ end
+
 
 (* Pregunta 10
-       what_month 70 = 3;
-*)
+       oldest([(2012,2,28),(2011,3,31),(2011,4,28)]) = SOME (2011,3,31);
+ *)
 
+fun oldest (dates : (int * int * int) list) =
+  if null dates then NONE
+  else
+     let fun oldest_helper (dates: (int * int * int) list) =
+         if null (tl dates) then hd dates
+         else
+            let val tail_oldest = oldest_helper(tl dates)
+            in
+              if is_older(hd dates, tail_oldest) then hd dates
+              else tail_oldest
+         end
+         in
+          SOME (oldest_helper(dates))
+  end
+
+(*  Carlos Alberto Cespedes Soliz    *)
 
 	      
