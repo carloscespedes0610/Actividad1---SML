@@ -37,3 +37,15 @@ fun dates_in_month (fechas:((int*int*int) list), mes: int)=
 fun get_nth (cadena: (string) list, n: int)=
   if n=1 then hd(cadena)
   else get_nth(tl(cadena),n-1)
+
+	                  (* Pregunta 7*)
+
+	                  (* Pregunta 8*)
+
+	                  (* Pregunta 9*)
+
+	                  (* Pregunta 10*)
+
+	                  (* Pregunta 11*)
+
+	      
